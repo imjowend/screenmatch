@@ -17,6 +17,6 @@ public class Pelicula {
     }
 
     double calculaMedia(){
-        return sumaDeLasEvaluaciones/totalEvaluaciones;
+        return sumaDeLasEvaluaciones / totalEvaluaciones;
     }
 }
