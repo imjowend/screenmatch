@@ -1,4 +1,6 @@
 import com.imjowend.screenmatch.Calculos.CalculadoraDeTiempo;
+import com.imjowend.screenmatch.Calculos.FiltroRecomendacion;
+import com.imjowend.screenmatch.Modelos.Episodio;
 import com.imjowend.screenmatch.Modelos.Pelicula;
 import com.imjowend.screenmatch.Modelos.Serie;
 
@@ -39,5 +41,15 @@ public class Principal {
         otraPelicula.setDuracionEnMinutos(180);
         calculadoraDeTiempo.incluye(otraPelicula);
         System.out.println(calculadoraDeTiempo.getTiempoTotal());
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(miPelicula);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("La casa Targaryen");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(300);
+        filtroRecomendacion.filtra(episodio);
     }
 }
